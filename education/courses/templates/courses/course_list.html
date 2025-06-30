@@ -1,0 +1,7 @@
+<h2>All Courses</h2>
+{% for course in object_list %}
+    <p><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></p>
+{% empty %}
+    <p>No courses found.</p>
+{% endfor %}
+<a href="{% url 'course_create' %}">Add New Course</a>

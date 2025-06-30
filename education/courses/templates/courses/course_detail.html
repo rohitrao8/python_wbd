@@ -1,0 +1,7 @@
+<h2>{{ object.title }}</h2>
+<p><strong>Instructor:</strong> {{ object.instructor }}</p>
+<p><strong>Duration:</strong> {{ object.duration }} hours</p>
+<p>{{ object.description }}</p>
+<a href="{% url 'course_update' object.id %}">Edit</a> |
+<a href="{% url 'course_delete' object.id %}">Delete</a> |
+<a href="{% url 'course_list' %}">Back to List</a>
